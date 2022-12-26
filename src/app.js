@@ -6,7 +6,7 @@ export const App = (elementId) => {
     (() => {
         const app = document.querySelector(elementId);
         app.innerHTML = html;
-        renderLoader();
+        // renderLoader();
 
     })();
 

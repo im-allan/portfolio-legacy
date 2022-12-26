@@ -26,6 +26,11 @@
   animation-delay: 0.35s;
 }
 
+.outsider {
+  transition: all 4s;
+  animation: 1.4s jumping 0.75s 2 linear, 1.4s jumping 6s 2.5 linear forwards, 3.5s otherJump 6s forwards, 4s scalar 8s linear forwards;
+}
+
 /* Say hi */
 .loader__h2 {
   margin-left: -5.1rem;
@@ -36,10 +41,54 @@
   animation: 2s greet forwards;
 }
 
-.outsider {
-  transition: all 4s;
-  animation: 1.4s jumping 0.75s 2 linear, 1.4s jumping 6s 2.5 linear forwards, 3.5s otherJump 6s forwards, 4s scalar 8s linear forwards;
+
+/*Navbar*/
+.navbar {
+  z-index: 10000;
+  position: fixed;
+  transition: 200ms clip-path 0ms, 200ms height 150ms;
+  display: flex;
+  height: 4em;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-around;
+  backdrop-filter: blur(1px);
 }
+
+.navbar__list {
+  max-width: 100%;
+  width: 100%;
+  display: grid;
+  grid-area: nav;
+  grid-auto-flow: column;
+  grid-template-columns: max-content;
+  column-gap: 0.75em;
+  align-items: center;
+  grid-auto-rows: 3em;
+  place-self: center;
+  list-style-type: none;
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+}
+
+.navbar__list__item--lang {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: end;
+}
+
+.button__item {
+  position: relative;
+  max-width: 4.1rem;
+}
+
+.navbar.scrolled {
+  transition: 200ms clip-path 0ms, 200ms height 150ms;
+  height: 3.5em;
+}
+
+
+/*KEYFRAMES*/
 
 /* Keyframes loader*/
 @keyframes greet {
