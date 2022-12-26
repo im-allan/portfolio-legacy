@@ -1,4 +1,3 @@
-
 export const atom = () => {
     let cant = 20,
         offset = 2 / cant;
