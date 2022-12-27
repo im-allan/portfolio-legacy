@@ -3,7 +3,7 @@
 }
 
 :root {
-    --primary-color: #181818;
+    --primary-color: #000000;
     --secondary-color: #f0f0f0;
     --tertiary-color: #f0f0f0;
 
@@ -14,7 +14,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #f0f0f0;
-        --secondary-color: #181818;
+        --secondary-color: #000000;
         --tertiary-color: #28282B;
 
     }
