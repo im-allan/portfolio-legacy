@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from "gsap/all";
+import { gsap, ScrollTrigger } from "gsap/all";
 import Lenis from "@studio-freight/lenis";
 
 export const smooth = () => {
@@ -48,9 +48,9 @@ export const smooth = () => {
             x: 0
         });
     });
-    const tlPin = gsap.timeline({
+    const tlKnowledge = gsap.timeline({
         scrollTrigger: {
-            trigger: ".pin-section",
+            trigger: ".knowledge__section",
             start: "center center",
             end: "+=500%",
             pin: true,
@@ -58,7 +58,7 @@ export const smooth = () => {
         }
     });
 
-    tlPin.to('.pin-text', {
+    tlKnowledge.to('.knowledge__section__p', {
         scale: 2
     })
 }
