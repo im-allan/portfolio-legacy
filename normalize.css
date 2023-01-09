@@ -4,30 +4,21 @@
 
 :root {
     --primary-color: #000000;
-    --secondary-color: #f0f0f0;
-    --tertiary-color: #f0f0f0;
+    --secondary-color: #fff;
+    --tertiary-color: #fff;
 
     --primary-typography: Roboto;
     --scondary-typography: sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #f0f0f0;
         --secondary-color: #000000;
         --tertiary-color: #28282B;
 
     }
-}
-
-@media (prefers-contrast: high) {
-    :root {
-        --primary-color: black;
-        --secondary-color: white;
-
-    }
-
-}
+} */
 
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -131,6 +122,7 @@ svg {
 }
 
 body {
+    overflow-x: hidden;
     font-size: 100%;
     font-family: var(--primary-typography);
     color: var(--primary-color);
@@ -146,4 +138,17 @@ html {
 
 html {
     scroll-behavior: initial;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    background: transparent;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
+html {
+    scrollbar-width: none;
 }
