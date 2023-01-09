@@ -10,7 +10,7 @@ import { onKeyup } from './use-cases/onkeyup';
 // import { sndMail } from './use-cases/mail';
 import { showDemo } from './use-cases/scrollText';
 import { media } from './use-cases/media';
-
+import { onclick } from './use-cases/onclick';
 
 
 export const App = (elementId) => {
@@ -25,10 +25,11 @@ export const App = (elementId) => {
         atom();
         reveal();
 
-        if (!(window.matchMedia("( max-width: 600px )").matches)) {
+        if (!(window.matchMedia("( max-width: 900px )").matches)) {
             smooth();
             showDemo();
             move();
+            onclick();
         }
         onKeyup();
         media();

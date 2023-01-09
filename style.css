@@ -903,18 +903,21 @@
 
 .footer {
   display: grid;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   z-index: 10000;
   grid-template-rows: repeat(3, 2fr);
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: .1fr repeat(4, 1fr);
   gap: 2%;
   max-width: 100%;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  height: 40vh;
+  height: 45vh;
 }
 
 .footer h2 {
   font-size: 1.5em;
+  color: var(--secondary-color);
 }
 
 .footer__info,
