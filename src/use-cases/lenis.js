@@ -26,7 +26,6 @@ export const smooth = () => {
             trigger: ".slide",
             start: "top-=" + window.innerHeight,
             end: "top+=100",
-            // markers: true,
             scrub: 1
         },
         background: document.querySelector(".projects").dataset.backgroundTo,
@@ -52,7 +51,7 @@ export const smooth = () => {
         scrollTrigger: {
             trigger: ".knowledge__section",
             start: "center center",
-            end: "+=500%",
+            end: "+=300%",
             pin: true,
             scrub: true
         }
