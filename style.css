@@ -326,12 +326,23 @@ html {
   row-gap: 2em;
   grid-template-columns: 1fr 1.3fr;
   grid-template-rows: repeat (6, 1fr);
+  height: 100%;
   align-items: center;
 }
 
-.card {
-  height: 100%;
-  width: 100%;
+.card__img {
+  grid-column: 1;
+  grid-row: 1;
+  height: 70%;
+  width: auto;
+  margin-top: 5%;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* .card {
   cursor: pointer;
   align-items: center;
   background-color: var(--tertiary-color);
@@ -342,19 +353,17 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-columns: 1fr;
-}
+} */
 
 .card--projects {
-  height: 65vh;
-  width: 100%;
-  grid-column: 2;
-  grid-row: 1/3;
   background: linear-gradient(217deg, rgba(9, 0, 255, .8), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(255, 140, 0, .8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(255, 0, 0, .8), rgba(0, 0, 255, 0) 70.71%);
+  display: grid;
 }
 
 .left {
+  overflow: hidden;
   display: grid;
   height: 80vh;
   width: 90%;
@@ -366,6 +375,7 @@ html {
 }
 
 .bottom {
+  display: grid;
   height: 80vh;
   width: 75%;
   grid-column: 2;
@@ -373,24 +383,46 @@ html {
   margin-left: auto;
 }
 
-.overlay {
+.card__overlay {
   width: 100%;
   height: 100%;
   display: grid;
+  margin-top: 0;
+  margin-bottom: auto;
+  /* display: grid; */
   grid-column: 1;
   grid-row: 1;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: repeat(6, 1fr);
   background: rgba(77, 77, 77, .9);
   color: var(--primary-color);
   opacity: 0;
   transition: all 0.5s;
-  font-family: 'Playfair Display', serif;
 }
 
 .items {
   padding-left: 20px;
   letter-spacing: 3px;
+  color: white;
+}
+
+.items__head {
+  padding-top: 12px;
+  font-size: 1.2rem;
+  grid-column: 1;
+  grid-row: 1;
+  color: rgba(255, 255, 255, 0.9);
+  padding-left: 12px;
+}
+
+.items__text {
+  color: rgba(255, 255, 255, 0.9);
+  padding-left: 8px;
+  grid-row: 2;
+}
+
+.details {
+  grid-row: 4;
 }
 
 .head {
@@ -398,6 +430,7 @@ html {
   line-height: 40px;
   transform: translateY(40px);
   transition: all 0.7s;
+  color: white;
 }
 
 .text {
@@ -407,11 +440,12 @@ html {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.7s;
+  color: white;
 }
 
 .text .old {
   text-decoration: line-through;
-  color: var(--secondary-color);
+  color: white;
 }
 
 .details {
@@ -431,26 +465,26 @@ html {
   margin-left: 10px;
 }
 
-.card:hover .overlay {
+.card--projects:hover .card__overlay {
   opacity: 1;
 }
 
-.card:hover .overlay .head {
+.card--projects:hover .card__overlay .head {
   transform: translateY(0px);
 }
 
-.card:hover .overlay hr {
+.card--projects:hover .card__overlay hr {
   width: 75px;
   transition-delay: 0.4s;
 }
 
-.card:hover .overlay .text {
+.card--projects:hover .card__overlay .text {
   transform: translateY(0px);
   transition-delay: 0.3s;
   opacity: 1;
 }
 
-.card:hover .overlay .details {
+.card--projects:hover .card__overlay .details {
   transform: translateY(0px);
   transition-delay: 0.6s;
   opacity: 1;
