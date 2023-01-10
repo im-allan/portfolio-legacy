@@ -27,7 +27,7 @@ export const App = (elementId) => {
         $(document).ready(function () {
             $(this).scrollTop(0);
         });
-        // renderLoader();
+        renderLoader();
         atom();
         reveal();
         knowledge();
