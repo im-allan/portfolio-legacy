@@ -11,6 +11,7 @@ import { onKeyup } from './use-cases/onkeyup';
 import { showDemo } from './use-cases/scrollText';
 import { media } from './use-cases/media';
 import { onclick } from './use-cases/onclick';
+import { knowledge } from './use-cases/knowledge';
 
 
 export const App = (elementId) => {
@@ -24,7 +25,7 @@ export const App = (elementId) => {
         parallaxScroll();
         atom();
         reveal();
-
+        knowledge();
         if (!(window.matchMedia("( max-width: 900px )").matches)) {
             smooth();
             showDemo();
