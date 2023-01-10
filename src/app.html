@@ -1,10 +1,10 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
 <!-- Loader -->
-<section class="container__loader" id="container__loader">
+<!-- <section class="container__loader" id="container__loader">
     <section class="loader">
         <span class="loader__span"></span><span class="loader__span"></span><span class="loader__span outsider"></span>
     </section>
-</section>
+</section> -->
 <!-- End Loader -->
 <!-- Navbar Lateral -->
 <nav class="Quick-navigation">
@@ -55,36 +55,39 @@
     <section class="projects slide" id="projects" data-background-to="" data-color-to="">
         <h2 class="projects__h2"> <span class="projects__span">Proyectos seleccionados</span></h2>
         <section class="card__container">
-
-
-            <section class="card card--projects left reveal__left" id="reveal__left">
-                <!-- <img class="card__img" src="/src/img/calculator.png" alt=""> -->
-                <div class="overlay">
-                    <div class="items"></div>
-                    <div class="items__head">
-                        <p>Proyecto 1</p>
-                    </div>
-                    <div class="items__text">
-                        <p>Texto</p>
-                    </div>
-                    <div class="items details">
-                        <a href=""><i class="fa-brands fa-github details__i"></i><span class="details_span">Ver
-                                más</span></a>
-                    </div>
-                </div>
+            <section>
+                <section class="card--projects left reveal__left" id="reveal__left">
+                    <img class="card__img" src="/src/img/calculator.png" alt="Calculator image">
+                    <section class="card__overlay">
+                        <div class="items"></div>
+                        <div class="items__head">
+                            <p>Simple calculator</p>
+                        </div>
+                        <div class="items__text">
+                            <p>Calculadora desarrollada en Python, mediante el uso de su librería nativa Tkinter.</p>
+                        </div>
+                        <div class="items details">
+                            <a target="_blank" href="https://github.com/im-allan/basic-calculator"><i
+                                    class="fa-brands fa-github details__i"></i> <span class="details_span">Ver
+                                    más</span></a>
+                        </div>
+                    </section>
+                </section>
             </section>
-            <section class="card card--projects bottom reveal__top--hidden" id="reveal__top--hidden">
-                <!-- <img class="card__img" src="/src/img/calculator.png" alt=""> -->
-                <div class="overlay">
+            <section class="card--projects bottom reveal__top--hidden" id="reveal__top--hidden">
+                <img class="card__img" src="/src/img/blackjack.png" alt="Blackjack image">
+                <div class="card__overlay">
                     <div class="items"></div>
                     <div class="items__head">
-                        <p>Proyecto 1</p>
+                        <p>Blackjack Game</p>
                     </div>
                     <div class="items__text">
-                        <p>Texto</p>
+                        <p>Videojuego Blackjack desarrollado en Javascript vanilla, en la herramienta de compilación
+                            Vite.</p>
                     </div>
                     <div class="items details">
-                        <a href=""><i class="fa-brands fa-github details__i"></i><span class="details_span">Ver
+                        <a target="_blank" href="https://im-allan.github.io/blackjack-vite/"><i
+                                class="fa-brands fa-github details__i"></i> <span class="details_span">Ver
                                 más</span></a>
                     </div>
                 </div>
@@ -101,28 +104,28 @@
             <div class="knowledge__image">
                 <h2 class="revealed">Python</h2>
                 <h2 class="revealed">Manejo de Frameworks: Django y Flask.</h2>
-                <img class="know__img" src="src\img\python-logo.svg" alt="">
+                <img class="know__img" src="src\img\python-logo.svg" alt="Python logo">
             </div>
         </section>
         <section class="knowledge">
             <div class="knowledge__image">
                 <h2 class="revealed">JavaScript</h2>
                 <h2 class="revealed">ES6. Descubriendo Vue.js</h2>
-                <img class="know__img" src="src\img\javascript-logo.svg" alt="">
+                <img class="know__img" src="src\img\javascript-logo.svg" alt="JavaScript logo">
             </div>
         </section>
         <section class="knowledge">
             <div class="knowledge__image">
                 <h2 class="revealed">Git</h2>
                 <h2 class="revealed">Branch, Pull request, Bash, Log.</h2>
-                <img class="know__img" src="\src\img\git-bash.svg" alt="">
+                <img class="know__img" src="\src\img\git-bash.svg" alt="Git Bash logo">
             </div>
         </section>
         <section class="knowledge">
             <div class="knowledge__image">
                 <h2 class="revealed">Tensorflow</h2>
                 <h2 class="revealed">Proyectos en Jupyter, Collab y Kaggle.</h2>
-                <img class="know__img" src="src\img\tensorflow-logo.svg" alt="">
+                <img class="know__img" src="src\img\tensorflow-logo.svg" alt="TensorFlow Logo">
             </div>
         </section>
     </section>
