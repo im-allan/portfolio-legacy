@@ -87,6 +87,50 @@ html {
 }
 
 
+/* Lateral navbar*/
+.Quick-navigation {
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.Quick-navigation-item {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  font-size: .8em;
+  transition: color 0.3s;
+  padding: 0.5em;
+  display: block;
+}
+
+.Quick-navigation-item:hover,
+.Quick-navigation-item.current {
+  color: #fff;
+}
+
+.Scroll-progress-indicator {
+  color: rgba(0, 0, 0, 0.5);
+  will-change: opacity, transform;
+  transition: all 0.5s;
+  left: -10px;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  padding: 1em;
+  transform: translateX(200%) translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Scroll-progress-indicator.visible {
+  transform: translateX(-100%) translateY(-50%);
+  opacity: 1;
+}
+
+
 /* Main */
 .main {
   position: relative;
@@ -108,12 +152,7 @@ html {
 
 /* Main - Info*/
 .info {
-  display: grid;
-  position: sticky;
-  top: 0;
-  margin-top: -100vh;
-  width: 100%;
-  height: 110vh;
+
   grid-column: 1/4;
   grid-row: 3;
   row-gap: 1em;
@@ -122,45 +161,86 @@ html {
   grid-template-columns: 0.7fr 2fr 8fr;
 }
 
-.info .header {
-  display: flex;
-  grid-area: main;
-  align-items: flex-end;
-  font-size: 1.2em;
+.main__container {
+  display: grid;
+  position: sticky;
+  top: 0;
+  margin-top: -100vh;
+  width: 100%;
+  height: 110vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.shapes {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: var(--primary-color);
+  overflow: hidden;
+}
+
+.shape {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape.shape-1 {
+  background-color: rgba(106, 90, 205, .3);
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+}
+
+.shape.shape-2 {
+  background-color: rgba(238, 130, 238, .4);
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+
+.shape.shape-3 {
+  background-color: rgba(0, 0, 255, .2);
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+.content {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  justify-content: left;
+  text-align: left;
+  height: 110vh;
+  width: 100%;
+  background: #fff;
+  mix-blend-mode: screen;
 }
 
 .header__h1 {
+  margin-top: auto;
+  padding-left: 8px;
   font-size: 1.4em;
+  grid-row: 2;
 }
 
-.info .info__additional {
+.main__p {
   grid-row: 3;
-  grid-column: 2/7;
-}
-
-.info .header {
-  grid-column: 2/7;
-  font-size: .875em;
-}
-
-.info .info__additional h2 {
   font-size: 5em;
   line-height: 1.2em;
+  color: #000;
+  margin: 0;
 }
 
-.info .icons {
-  display: flex;
-  gap: 1em;
-  grid-row: 4;
-  grid-column: 2/7;
-  width: 2em;
-}
 
-.icons a {
-  display: inline-block;
-  width: 1em;
-  font-size: 1.4em;
-}
+
+
 
 /* Main - Canvas */
 .canvas {
@@ -214,7 +294,7 @@ html {
   column-gap: 4%;
   row-gap: 4%;
   width: 100%;
-  height: 260vh;
+  height: 200vh;
 }
 
 .projects__h2 {
@@ -438,7 +518,7 @@ html {
   position: relative;
   grid-column: 2;
   width: 100%;
-  display: flex;
+  /* display: flex; */
 }
 
 .knowledge .revealed {
@@ -478,7 +558,7 @@ html {
 }
 
 .knowledge .revealed:nth-child(2):before {
-  background: #ffeb3b;
+  background: rgba(106, 90, 205, 1);
 }
 
 .knowledge .revealed.actived:before {
@@ -487,6 +567,8 @@ html {
 }
 
 .knowledge img {
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   display: block;
   max-width: 280px;
@@ -563,6 +645,7 @@ html {
 /* Lateral */
 .lateral__wrapper {
   overflow-y: hidden;
+  pointer-events: none;
 }
 
 .l__right {
@@ -949,6 +1032,10 @@ html {
     font-size: 12px;
   }
 
+  .circle {
+    display: none;
+  }
+
   .left {
     height: 40vh;
     width: 70vw;
@@ -1181,6 +1268,18 @@ html {
   }
 }
 
+
+@media only screen and (min-width: 1245px) {
+
+  .input__container,
+  .elastic__line,
+  .line__svg,
+  .inputs {
+    background-color: transparent;
+    fill: transparent;
+  }
+}
+
 @media only screen and (min-height: 1000px) {
   .md {
     height: 50vh;
@@ -1195,6 +1294,13 @@ html {
   .line__svg,
   .elastic__line {
     display: none;
+  }
+
+  .inputs {
+    border: none;
+    border-bottom: 2px solid #D1D4DA;
+    height: 2rem;
+    padding-bottom: 0;
   }
 }
 

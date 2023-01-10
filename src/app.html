@@ -1,3 +1,5 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+
 <!-- Loader -->
 <!-- <section class="container__loader" id="container__loader">
     <section class="loader">
@@ -6,32 +8,40 @@
 </section> -->
 
 <!-- End Loader -->
-
+<!-- Navbar Lateral -->
+<nav class="Quick-navigation">
+    <a href="#intro" class="Quick-navigation-item">Intro</a>
+    <a href="#projects" class="Quick-navigation-item">Proyectos</a>
+    <a href="#knowledge" class="Quick-navigation-item">Conocimiento</a>
+    <a href="#contact" class="Quick-navigation-item">Contacto</a>
+    <div class="Scroll-progress-indicator"></div>
+</nav>
+<!-- End lateral -->
 <!-- Main container -->
 <section class="container">
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <ul class="navbar__list">
-            <li class="navbar__list__item"><a class="button__item" id="to__intro">Explorar</a></li>
-            <li class="navbar__list__item"><a class="button__item" href="#contact">Contacto</a></li>
+            <li class="navbar__list__item"><a class="button__item" id="to__intros">Explorar</a></li>
+            <li class="navbar__list__item"><a class="button__item" id="to__contact">Contacto</a></li>
         </ul>
     </nav>
     <!-- End Navbar -->
     <!-- Main -->
     <main class="main" id="intro">
         <div class="parallax__inner">
-            <section class="info">
-                <header class="header">
-                    <h1 class="header__h1">Hola, soy Allan.</h1>
-                </header>
-                <article class="info__additional">
-                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
-                </article>
-                <nav class="icons">
-                    <a target="_blank" href="https://github.com/im-allan"><i class="fa-brands fa-github"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a target="_blank" href="https://www.kaggle.com/allanqs"><i class="fa-brands fa-kaggle"></i></a>
-                </nav>
+
+            <section class="main__container">
+                <div class="cursor"></div>
+                <div class="shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+                <div class="content">
+                    <h1 class="header__h1">Hola! soy Allan.</h1>
+                    <p class="main__p">Ingeniero informático</p>
+                </div>
             </section>
         </div>
         <!-- Circle -->
@@ -89,7 +99,6 @@
         <p class="knowledge__section__p">Áreas de conocimiento</p>
     </section>
     <section class="knowledge__packaging">
-
         <section class="knowledge">
             <div class="knowledge__image">
                 <h2 class="revealed">Python</h2>
@@ -119,7 +128,6 @@
             </div>
         </section>
     </section>
-
     <!-- End Knowledge -->
     <!-- Contact -->
     <section class="container__contact" id="contact">
@@ -130,7 +138,6 @@
                 </section>
             </section>
         </section>
-
         <section class="entry">
             <div class="entry__container">
                 <svg class="entry__table-stand" width="704" height="574" viewBox="0 0 704 574" fill="none"
@@ -175,7 +182,6 @@
                         </g>
                     </g>
                 </svg>
-
                 <section class="contact">
                     <div class="backform pink -md -sm"></div>
                     <div class="backform purple -md -sm"></div>
@@ -235,14 +241,12 @@
                                 <span class="count__span" id="count__span">/120</span>
                                 <span class="total__span" id="total__span">0</span>
                             </section>
-
                             <button type="submit" class="submit" id="submit">Enviar</button>
                             <input type="hidden" name="_subject" value="New submission from portfolio!">
                             <!--  -->
                             <!--  -->
                             <!--  -->
                             <input type="hidden" name="_captcha" value="false">
-
                             <svg class="entry__table-stand-s" viewBox="0 0 704 574" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g id="letter">
@@ -285,9 +289,7 @@
                                     </g>
                                 </g>
                             </svg>
-
                         </div>
-
                         <div class="submitted">
                             <p class="submitted__p">¡Gracias por su mensaje!<br><br>Pronto me pondré en contacto con
                                 usted.
@@ -336,16 +338,16 @@
                 </section>
             </div>
         </section>
-
         <section class='lateral__wrapper l__right' id="lateral__wrapper">
             <section class='lateral__text'>
                 <section class='move__wrapper move__text'>
-                    <pre>CONTACT</pre>
+                    <pre>CONTACTO</pre>
                 </section>
             </section>
         </section>
     </section>
-
+    <!-- End Contact -->
+    <!-- Footer -->
     <footer class="footer">
         <section class="ident"></section>
         <section class="footer__info">
@@ -354,27 +356,21 @@
             <a class="social__a" target="_blank" href="#">LinkedIn</a>
             <a class="explore__a" id="to__contact">Contacto</a>
         </section>
-
         <section class="footer__explore">
             <h2 class="explore__h2">Explorar</h2>
             <br>
             <a class="explore__a" id="to__intros">Intro</a>
             <a class="explore__a" id="to__projects">Proyectos</a>
             <a class="explore__a" id="to__knowledge">Áreas de conocimiento</a>
-
         </section>
-
         <section class="footer__social">
             <h2 class="social__h2">Social</h2>
             <br>
             <a class="social__a" target="_blank" href="https://github.com/im-allan">Github</a>
             <a class="social__a" target="_blank" href="https://www.kaggle.com/allanqs">Kaggle</a>
-            <a class="social__a" target="_blank" href="#">Codepen</a>
+            <a class="social__a" target="_blank" href="https://codepen.io/im-allan">Codepen</a>
         </section>
-
     </footer>
-
-
-    <!-- End Contact -->
+    <!-- End footer -->
 </section>
 <!-- End Main container -->
