@@ -4,7 +4,7 @@ export const sndMail = () => {
     form.addEventListener('submit', () => {
         if (textarea.value.trim().length > 10) {
             const formData = new FormData(form),
-                url = 'https://formsubmit.co/4625de8550c815d89aa463b5c025e24e';
+                url = 'https://formsubmit.co/al.quirozsilva@gmail.com';
             fetch(
                 url,
                 {

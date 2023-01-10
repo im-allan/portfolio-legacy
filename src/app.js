@@ -7,7 +7,7 @@ import { reveal } from './use-cases/reveal';
 import { move } from './use-cases/move';
 import { formUtils } from './use-cases/form';
 import { onKeyup } from './use-cases/onkeyup';
-// import { sndMail } from './use-cases/mail';
+import { sndMail } from './use-cases/mail';
 import { showDemo } from './use-cases/scrollText';
 import { media } from './use-cases/media';
 import { onclick } from './use-cases/onclick';
@@ -34,7 +34,7 @@ export const App = (elementId) => {
         }
         onKeyup();
         media();
-        // sndMail();
+        sndMail();
         formUtils();
 
 

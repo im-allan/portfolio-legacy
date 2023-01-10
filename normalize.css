@@ -136,10 +136,6 @@ html {
     min-height: 100%;
 }
 
-html {
-    scroll-behavior: initial;
-}
-
 ::-webkit-scrollbar {
     display: none;
     background: transparent;

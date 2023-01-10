@@ -1,3 +1,8 @@
+/* General */
+html {
+  scroll-behavior: initial;
+}
+
 /* Loader */
 .container__loader {
   z-index: 100000;
@@ -870,6 +875,10 @@
   margin-top: 30px;
 }
 
+.explore__a,
+.social__a {
+  padding-bottom: 4px;
+}
 
 /* Contact - SVG */
 #sheet {
@@ -988,6 +997,10 @@
 @media only screen and (max-width: 900px) {
   .knowledge__section__p {
     font-size: 3rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   .projects__h2 .projects__span {

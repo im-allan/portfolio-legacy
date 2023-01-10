@@ -22,7 +22,7 @@ export const onclick = () => {
     contact.addEventListener('click', () => {
         lenis.scrollTo('#contact');
     });
-    const intro = document.querySelector('#to__intro');
+    const intro = document.querySelector('#to__intros');
     intro.style.cursor = "pointer";
     intro.addEventListener('click', () => {
         lenis.scrollTo('#intro');
