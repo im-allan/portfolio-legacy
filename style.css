@@ -33,7 +33,7 @@ html {
 
 .outsider {
   transition: all 4s;
-  animation: 1.4s jumping 0.75s 2 linear, 1.4s jumping 6s 2.5 linear forwards, 3.5s otherJump 6s forwards, 4s scalar 8s linear forwards;
+  animation: 1.4s jumping 0.75s 2 linear, 1.5s jumping 3.2s 8 linear forwards;
 }
 
 /* Say hi */
@@ -1346,22 +1346,10 @@ html {
   }
 
   to {
-    margin-left: 40em;
-    margin-right: -16.5em;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 
-}
-
-@keyframes scalar {
-  from {
-    transform: translateY(-1.2rem);
-    transition: linear;
-  }
-
-  to {
-    transition: linear;
-    transform: translateY(-3.4rem);
-  }
 }
 
 
